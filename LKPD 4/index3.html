@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // SOAL NO 3
+
+        function menghitung (dataJam, dataMenit, dataDetik) {
+
+            let totalDetik = dataJam * 3600 + dataMenit * 60 + dataDetik;
+            let hasilTotalDetik = totalDetik + 1;
+            let totalJam = (Math.floor(hasilTotalDetik / 3600) % 24 );
+            let sisaDetik = hasilTotalDetik % 3600;
+            let totalMenit = Math.floor(sisaDetik / 60);
+            let second = sisaDetik % 60;
+
+            console.log(`${dataJam} jam ${dataMenit} Menit ${dataDetik} detik`);
+            console.log(`${totalJam} jam ${totalMenit} menit ${second} detik`);
+
+        }
+
+        menghitung(2, 25, 11);
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // SOAL NO 5
+
+        var jumlahBilangan = 20;
+        var total = 0;
+        var bilanganTerbesar = -Infinity;
+        var bilanganTerkecil = Infinity;
+
+        for (var count = 1; count <= jumlahBilangan; count++) {
+            var bilangan = parseFloat(
+                prompt("Masukkan bilangan ke-" + count + ":")
+            );
+
+            // Mengupdate bilangan terbesar dan terkecil
+            if (bilangan > bilanganTerbesar) {
+                bilanganTerbesar = bilangan;
+            }
+
+            if (bilangan < bilanganTerkecil) {
+                bilanganTerkecil = bilangan;
+            }
+
+            // Menambahkan bilangan ke total
+            total += bilangan;
+        }
+
+        // Menghitung rata-rata
+        var rataRata = total / jumlahBilangan;
+
+        // Menampilkan hasil
+        console.log("Bilangan Terbesar: " + bilanganTerbesar);
+        console.log("Bilangan Terkecil: " + bilanganTerkecil);
+        console.log("Rata-rata Bilangan: " + rataRata.toFixed(2));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // SOAL 1
+
+        var nama = prompt("Masukkan Nama Anda");
+        var PABP = prompt("Masukkan nilai PABP:");
+        var MTK = prompt("Masukkan nilai MTK:");
+        var DPK = prompt("Masukkan nilai DPK:");
+
+        // Menghitung rata-rata tanpa menggunakan parseInt
+        var mean = (+MTK + +PABP + +DPK) / 3;
+
+        // Menentukan grade berdasarkan rata-rata
+        if (mean >= 80 && mean <= 100) {
+            grade = "A";
+        } else if (mean >= 75 && mean <= 80) {
+            grade = "B";
+        } else if (mean >= 65 && mean <= 75) {
+            grade = "C";
+        } else if (mean >= 45 && mean <= 65) {
+            grade = "D";
+        } else if (mean >= 0 && mean <= 45) {
+            grade = "E";
+        } else {
+            grade = "K";
+        }
+
+        console.log(`rata-rata nilai ${nama} adalah: ${mean}`);
+        console.log(`jadi nilai ikbal adalah: ${grade}`);
+
+    </script>
+
+</body>
+
+</html>

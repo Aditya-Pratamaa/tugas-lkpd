@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // SOAL NO 2
+
+        // Meminta pengguna memasukkan nomor pegawai
+        var nomorPegawai = prompt("Masukkan nomor pegawai (11 digit):");
+
+        // Memanggil fungsi untuk mencetak informasi pegawai
+        cetakInformasiPegawai(nomorPegawai);
+
+        // Fungsi untuk mencetak informasi pegawai
+        function cetakInformasiPegawai(nomorPegawai) {
+            // Memeriksa apakah nomor pegawai memiliki panjang yang tepat
+            if (nomorPegawai.length === 11) {
+                // Mendapatkan informasi dari nomor pegawai
+                var golongan = nomorPegawai[0];
+                var tanggalLahir = nomorPegawai.substring(1, 9);
+                var nomorUrut = nomorPegawai.substring(9);
+
+                // Mengonversi bulan dari angka ke nama bulan
+                var bulan = getNamaBulan(tanggalLahir.substring(2, 4));
+
+                // Menampilkan informasi pegawai
+                console.log("Nomor Golongan: " + golongan);
+                console.log(
+                    "Tanggal Lahir: " +
+                    tanggalLahir.substring(0, 2) +
+                    "-" +
+                    bulan +
+                    "-" +
+                    tanggalLahir.substring(4, 8)
+                );
+                console.log("Nomor Urut Pegawai: " + nomorUrut);
+            } else {
+                console.log("Nomor pegawai tidak valid. Pastikan memiliki 11 digit.");
+            }
+        }
+
+        // Fungsi untuk mendapatkan nama bulan dari angka bulan (format: MM)
+        function getNamaBulan(bulan) {
+            var namaBulan = "";
+            switch (bulan) {
+                case "01":
+                    namaBulan = "JAN";
+                    break; 
+                case "02":
+                    namaBulan = "FEB";
+                    break;
+                case "03":
+                    namaBulan = "MAR";
+                    break;
+                case "04":
+                    namaBulan = "APR";
+                    break;
+                case "05":
+                    namaBulan = "MEI";
+                    break;
+                case "06":
+                    namaBulan = "JUN";
+                    break;
+                case "07":
+                    namaBulan = "JUL";
+                    break;
+                case "08":
+                    namaBulan = "AGU";
+                    break;
+                case "09":
+                    namaBulan = "SEP";
+                    break;
+                case "10":
+                    namaBulan = "OKT";
+                    break;
+                case "11":
+                    namaBulan = "NOV";
+                    break;
+                case "12":
+                    namaBulan = "DES";
+                    break;
+                default:
+                    namaBulan = "UNKNOWN";
+            }
+            return namaBulan;
+        }
+
+
+    </script>
+
+</body>
+
+</html>
